@@ -17,7 +17,6 @@ export default function Welcome(){
     const [login,setLogin] = useState('')
     const [password,setPassword] = useState('')
     const [showPassword, setShowPassword] = React.useState(false);
-    const [token, setToken] = useState(''); // State to store the token
 
     const navigate = useNavigate();
     const loginChange = (event) => {
@@ -32,15 +31,14 @@ export default function Welcome(){
         setPassword(event.target.value)
     }
     async function sendData(){
-        const url = 'http://localhost:5221/api/Authorization/SignIn';
+        const url = 'http://localhost:5222/api/Authorization/SignIn';
         const data = {
             Email: login,
             Password: password
         };
         try {
             const response = await axios.post(url, data);
-            setToken(response.data.data);
-            axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+            localStorage.setItem('auth_token', "Bearer " + response.data);
             navigate("/mainpage");
         }
         catch (error) {

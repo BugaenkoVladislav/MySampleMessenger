@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "uD6nYl3Uf7lXYMJ56Nl2vIbxz9/ax71qEqI55GagNVoAfdNS//44O98PEpjLv6/yCdbbSNPFudfdCSxDHTd1RQ==",
+  "success": true,
+  "projectFilePath": "C:\\Programing\\MyChat\\MyChat-back\\ChatService\\ChatService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Coffee_Cup\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\8.0.3\\microsoft.aspnetcore.connections.abstractions.8.0.3.nupkg.sha512",
+    "C:\\Users\\Coffee_Cup\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\8.0.3\\microsoft.aspnetcore.signalr.common.8.0.3.nupkg.sha512",
+    "C:\\Users\\Coffee_Cup\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Coffee_Cup\\.nuget\\packages\\microsoft.extensions.features\\8.0.3\\microsoft.extensions.features.8.0.3.nupkg.sha512",
+    "C:\\Users\\Coffee_Cup\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\Coffee_Cup\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\Coffee_Cup\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Coffee_Cup\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

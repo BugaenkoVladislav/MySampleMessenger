@@ -1,0 +1,26 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.sent {
+    background-color: #0b93f6; /* Голубой цвет для отправленных сообщений */
+    align-self: flex-end;
+    color: white;
+}
+
+.received {
+    background-color: #e5e5ea; /* Зеленый цвет для полученных сообщений */
+    align-self: flex-start;
+    color: black;
+}

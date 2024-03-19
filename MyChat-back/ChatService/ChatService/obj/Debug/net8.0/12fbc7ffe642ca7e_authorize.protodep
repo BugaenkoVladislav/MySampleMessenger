@@ -1,3 +1,0 @@
-obj\Debug\net8.0\Protos/Authorize.cs \
-obj\Debug\net8.0\Protos/AuthorizeGrpc.cs: C:/Users/Coffee_Cup/.nuget/packages/grpc.tools/2.62.0/build/native/include/google/protobuf/any.proto\
- Protos/authorize.proto
