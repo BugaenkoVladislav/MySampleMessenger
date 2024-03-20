@@ -14,9 +14,15 @@ namespace Server.Controller
     [ApiController]
     public class AuthorizationController(MyDbContext db) : ControllerBase
     {
-        
-
-
+        [Authorize]
+        [HttpGet("Me")]
+        public async  Task<string> GetUserFromId()
+        {
+            var result = HttpContext.User.Identity.Name;
+            return result;
+        } 
+            
+        [Authorize]
         [HttpGet("GetUserFromId/{id}")]
         public async Task<User> GetUserFromId(long id)
         {
@@ -24,14 +30,14 @@ namespace Server.Controller
         } 
         
         [HttpPost("SignIn")]
-        public async Task<string> SignIn(LoginPassword loginPassword)
+        public async Task<IResult> SignIn(LoginPassword loginPassword)
         {
             var user = await db.Users.FirstAsync(x =>
                 x.LoginPassword.Password == loginPassword.Password && x.LoginPassword.Email == loginPassword.Email);
             var role = user.IsAdmin == true ? "Admin" : "User";
             var claims = new List<Claim>
             {
-                new(ClaimTypes.NameIdentifier,user.Username),
+                new(ClaimTypes.Name,user.Username),
                 new(ClaimTypes.Role, role)
             };
             var token = new JwtSecurityToken(
@@ -40,7 +46,14 @@ namespace Server.Controller
                 issuer:AuthOptions.ISSUER,
                 expires:DateTime.Now.AddDays(10),
                 signingCredentials:new SigningCredentials(AuthOptions.GetSecurityKey(),SecurityAlgorithms.HmacSha256Signature));
-            return new JwtSecurityTokenHandler().WriteToken(token);
+            var encodedJwt = new JwtSecurityTokenHandler().WriteToken(token);
+            var response = new
+            {
+                access_token = encodedJwt,
+                username = user.Username
+            };
+ 
+            return Results.Json(response);
         }
     }
 }

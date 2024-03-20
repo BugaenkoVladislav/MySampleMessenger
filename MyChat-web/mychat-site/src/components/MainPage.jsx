@@ -4,22 +4,18 @@ import React, { useState, useEffect } from 'react';
 import * as signalR from '@microsoft/signalr';
 export default function MainPage(){
 
-    let authToken = localStorage.getItem('auth_token');
+    const authToken = localStorage.getItem('auth_token');
     const [message, setMessage] = useState('');
     const [connection, setConnection] = useState(
-    new signalR.HubConnectionBuilder()
-        .configureLogging(signalR.LogLevel.Information)
-        .withUrl("http://localhost:5139/chat",{ accessTokenFactory: () => authToken }) // Замените на URL вашего SignalR Hub
-        .build()
+        new signalR.HubConnectionBuilder()
+            .configureLogging(signalR.LogLevel.Information)
+            .withUrl("http://localhost:5139/chat",{ accessTokenFactory: () => authToken }) // Замените на URL вашего SignalR Hub
+            .build()
     );
-    const sendMessage = () => {
-        if (connection) {
-            connection.invoke("SendToUser",2, message)
-                .catch(err => console.error(err));
-            setMessage('');
-        }
-    };
 
+
+
+        // Запускаем соединение
     if (connection.state === signalR.HubConnectionState.Disconnected) {
         // Запускаем соединение
         connection.start().then(() => {
@@ -29,6 +25,20 @@ export default function MainPage(){
             console.error("Error while starting connection:", error);
         });
     }
+
+
+    const sendMessage = () => {
+        if (connection) {
+            connection.invoke("SendToUser", 2, message)
+                .then(() => {
+                    console.log("Message sent successfully!");
+                })
+                .catch((error) => {
+                    console.error("Error while sending message:", error);
+                });
+            setMessage('');
+        }
+    };
 
     connection.on("SendForUser", (username, message) => {
         console.log(`Message from ${username}: ${message}`);
@@ -41,8 +51,9 @@ export default function MainPage(){
                 type="text"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Введите сообщение..."/>
-            <button type="submit" onClick={sendMessage}>Отправить</button>
+                placeholder="Enter your message..."
+            />
+            <button type="button" onClick={sendMessage}>Send</button>
         </form>
     );
 }

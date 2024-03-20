@@ -112,3 +112,5 @@ C:\Programing\MyChat\MyChat-back\DatabaseService\obj\Debug\net8.0\refint\Databas
 C:\Programing\MyChat\MyChat-back\DatabaseService\obj\Debug\net8.0\DatabaseService.pdb
 C:\Programing\MyChat\MyChat-back\DatabaseService\obj\Debug\net8.0\DatabaseService.genruntimeconfig.cache
 C:\Programing\MyChat\MyChat-back\DatabaseService\obj\Debug\net8.0\ref\DatabaseService.dll
+C:\Programing\MyChat\MyChat-back\DatabaseService\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Programing\MyChat\MyChat-back\DatabaseService\bin\Debug\net8.0\DatabaseService.staticwebassets.runtime.json

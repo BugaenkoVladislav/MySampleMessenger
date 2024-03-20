@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Programing\\MyChat\\MyChat-back\\DatabaseService\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DatabaseService.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.DatabaseService.props",
+      "PackagePath": "build\\DatabaseService.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.DatabaseService.props",
+      "PackagePath": "buildMultiTargeting\\DatabaseService.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.DatabaseService.props",
+      "PackagePath": "buildTransitive\\DatabaseService.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

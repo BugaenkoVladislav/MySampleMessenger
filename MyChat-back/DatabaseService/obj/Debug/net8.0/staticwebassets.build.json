@@ -1,11 +1,39 @@
 {
   "Version": 1,
-  "Hash": "VrcV+hebna/HJDRiNJbbL4hRCKbzzo/JpO/ESG/18IE=",
+  "Hash": "fOirqaeGzPNiHxCmI7fG8egoAJNLsEIWwcc0XjjJm08=",
   "Source": "DatabaseService",
   "BasePath": "_content/DatabaseService",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "DatabaseService\\wwwroot",
+      "Source": "DatabaseService",
+      "ContentRoot": "C:\\Programing\\MyChat\\MyChat-back\\DatabaseService\\wwwroot\\",
+      "BasePath": "_content/DatabaseService",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Programing\\MyChat\\MyChat-back\\DatabaseService\\wwwroot\\index.html",
+      "SourceId": "DatabaseService",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Programing\\MyChat\\MyChat-back\\DatabaseService\\wwwroot\\",
+      "BasePath": "_content/DatabaseService",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
 }
